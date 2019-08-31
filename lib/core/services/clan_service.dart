@@ -1,8 +1,9 @@
-import '../constants/keys.secret.dart';
-import '../enums/api_type.dart';
-import '../mixins/http_helper.dart';
-import '../models/clan.dart';
-import '../models/clan_detail.dart';
+import 'package:wassistant/core/constants/keys.secret.dart';
+import 'package:wassistant/core/enums/api_type.dart';
+import 'package:wassistant/core/mixins/http_helper.dart';
+import 'package:wassistant/core/models/clan.dart';
+import 'package:wassistant/core/models/clan_detail.dart';
+
 import 'api_wrapper.dart';
 
 /// Player service for networking requests
@@ -23,6 +24,7 @@ class ClanService with HttpHelper {
     );
 
     // convert response to json object with validations
+    // TODO: Add Validation Helper
     final json = mappingWithValidation(response);
 
     // loop and convert each item to clan model
